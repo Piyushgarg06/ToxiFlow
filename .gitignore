@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+
+# Model weights
+*.pth
+
+# Dataset
+/data/
+*.h5
+*.csv
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# environments
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+
+saved/
+
+*.pt
