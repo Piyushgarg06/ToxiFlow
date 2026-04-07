@@ -18,16 +18,22 @@ drug_pipeline/
 │   │   ├── loader.py       # CSV ingestion with column validation
 │   │   ├── cleaner.py      # SMILES validation & deduplication
 │   │   ├── formatter.py    # Class weight balancing
-│   │   └── dataset.py      # PyTorch Dataset wrapper
+│   │   ├── dataset.py      # PyTorch Dataset wrapper
+│   │   └── dataLoader.py   # PyTorch DataLoader factory
 │   ├── models/
 │   │   ├── backbone.py     # ChemBERTa encoder
 │   │   ├── pooling.py      # Attention-masked mean pooling
 │   │   ├── head.py         # Linear prediction head
 │   │   └── model.py        # End-to-end DrugModel
+│   ├── representations/
+│   │   └── tokenizer.py    # SMILES tokenization logic
 │   ├── evaluation/
 │   │   └── metrics.py      # Evaluation metrics (TBD)
-│   ├── trainer/            # Training loop (TBD)
-│   └── pipeline/           # Full pipeline orchestration (TBD)
+│   ├── trainer/
+│   │   ├── loss.py         # Weighted BCE loss implementation
+│   │   └── training.py     # Batch training loop with tqdm
+│   └── pipeline/
+│       └── pipeline.py     # Full pipeline orchestration
 ├── main.py
 ├── requirements.txt
 └── .gitignore
@@ -63,10 +69,9 @@ pip install -r requirements.txt
 - [x] Transformer backbone (ChemBERTa)
 - [x] Mean pooling & prediction head
 - [x] End-to-end model assembly
-- [ ] Training loop
-- [ ] Evaluation metrics
-- [ ] Full pipeline orchestration
-- [ ] Experiment tracking
+- [x] Training loop with weighted loss
+- [x] Pipeline orchestration
+- [ ] Evaluation metrics (AUC-ROC, Sensitivity, Specificity)
 
 ## License
 
