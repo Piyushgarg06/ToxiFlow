@@ -25,3 +25,8 @@ venv/
 saved/
 
 *.pt
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+test.ipynb
+*.ipynb
