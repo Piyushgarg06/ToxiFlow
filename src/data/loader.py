@@ -1,8 +1,6 @@
 import pandas as pd 
 from pathlib import Path
 
-df = pd.read_csv("data/tox21.csv")
-path = "data/tox21.csv"
 def load_data(path,smiles_cols,target_cols):
     path = Path(path)
     
