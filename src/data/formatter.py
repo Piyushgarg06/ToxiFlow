@@ -1,6 +1,3 @@
-from loader import load_data
-from cleaner import clean_data
-
 def format_data(data):
     formatted=[]
     total = len(data)
