@@ -30,3 +30,5 @@ saved/
 .ipynb_checkpoints
 test.ipynb
 *.ipynb
+
+__init__.py
